@@ -74,7 +74,7 @@ class TagFieldMemberFrontend extends \FormTextField
 	{
 		$this->import('FrontendUser', 'User');
 		$this->import('Database');
-		$arrTags = $this->Database->prepare("SELECT * FROM tl_tag WHERE id = ? AND from_table = ? ORDER BY tag ASC")
+		$arrTags = $this->Database->prepare("SELECT tag FROM tl_tag WHERE id = ? AND from_table = ? ORDER BY tag ASC")
 			->execute($this->User->id, 'tl_member')
 			->fetchEach('tag');
 		return count($arrTags) ? implode(",", $arrTags) : '';
