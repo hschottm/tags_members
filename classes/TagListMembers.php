@@ -10,7 +10,7 @@ namespace Contao;
  * @author     Helmut Schottmüller <typolight@aurealis.de>
  * @package    Controller
  */
-class TagListMembers extends \TagList
+class TagListMembers extends TagList
 {
 	protected $arrMembergroups = array();
 	
