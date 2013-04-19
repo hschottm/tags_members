@@ -1,19 +1,20 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
- * @copyright  Helmut Schottmüller 2009
- * @author     Helmut Schottmüller <typolight@aurealis.de>
- * @package    tags
- * @license    LGPL
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
+ * @package    tags_members
+ * @license    LGPL 
  * @filesource
  */
+
 
 /**
  * Class tl_module_tags_members
  *
  * Provide miscellaneous methods that are used by the data configuration array.
- * @copyright  Helmut Schottmüller 2009
- * @author     Helmut Schottmüller <typolight@aurealis.de>
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
  * @package    Controller
  */
 class tl_module_tags_members extends tl_module

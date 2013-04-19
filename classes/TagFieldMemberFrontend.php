@@ -1,39 +1,21 @@
 <?php
 
-namespace Contao;
-
 /**
- * TYPOlight webCMS
- * Copyright (C) 2005 Leo Feyer
- *
- * This program is free software: you can redistribute it and/or
- * modify it under the terms of the GNU Lesser General Public
- * License as published by the Free Software Foundation, either
- * version 2.1 of the License, or (at your option) any later version.
- * 
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU
- * Lesser General Public License for more details.
- * 
- * You should have received a copy of the GNU Lesser General Public
- * License along with this program. If not, please visit the Free
- * Software Foundation website at http://www.gnu.org/licenses/.
- *
- * PHP version 5
- * @copyright  Helmut Schottmüller 2008
- * @author     Helmut Schottmüller <typolight@aurealis.de>
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
  * @package    Backend
- * @license    LGPL
+ * @license    LGPL 
  * @filesource
  */
+
+namespace Contao;
 
 /**
  * Class TagFieldFrontend
  *
  * Provide methods to handle tag input fields.
- * @copyright  Helmut Schottmüller 2008
- * @author     Helmut Schottmüller <typolight@aurealis.de>
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
  * @package    Controller
  */
 class TagFieldMemberFrontend extends \FormTextField
@@ -147,11 +129,11 @@ class TagFieldMemberFrontend extends \FormTextField
 		 */
 		if (is_array($GLOBALS['TL_JAVASCRIPT']))
 		{
-			array_insert($GLOBALS['TL_JAVASCRIPT'], 1, 'system/modules/tags/html/js/tag.js');
+			array_insert($GLOBALS['TL_JAVASCRIPT'], 1, 'system/modules/tags/assets/tag.js');
 		}
 		else
 		{
-			$GLOBALS['TL_JAVASCRIPT'] = array('system/modules/tags/html/js/tag.js');
+			$GLOBALS['TL_JAVASCRIPT'] = array('system/modules/tags/assets/tag.js');
 		}
 		$taglist = new TagList('tl_member');
 		$taglist->maxtags = $this->intMaxTags;

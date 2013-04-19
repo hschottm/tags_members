@@ -1,13 +1,12 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
- * @copyright  Helmut Schottmüller 2009
- * @author     Helmut Schottmüller <typolight@aurealis.de>
- * @package    tags
- * @license    LGPL
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
+ * @package    tags_members
+ * @license    LGPL 
  * @filesource
  */
-
 
 class tl_member_tags extends tl_member
 {

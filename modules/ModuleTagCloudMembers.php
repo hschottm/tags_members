@@ -1,21 +1,20 @@
 <?php
 
-namespace Contao;
-
 /**
- * @copyright  Helmut Schottmüller 2009 
- * @author     Helmut Schottmüller <typolight@aurealis.de>
- * @package    tags 
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
+ * @package    tags_members
  * @license    LGPL 
  * @filesource
  */
 
+namespace Contao;
 
 /**
  * Class ModuleTagCloudMembers
  *
- * @copyright  Helmut Schottmüller 2009
- * @author     Helmut Schottmüller <typolight@aurealis.de>
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
  * @package    Controller
  */
 class ModuleTagCloudMembers extends \ModuleTagCloud

@@ -1,13 +1,21 @@
 <?php
 
+/**
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
+ * @package    Backend
+ * @license    LGPL 
+ * @filesource
+ */
+
 namespace Contao;
 
 /**
  * Class TagListMembers
  *
  * Provide methods to handle tag input fields.
- * @copyright  Helmut Schottmüller 2009
- * @author     Helmut Schottmüller <typolight@aurealis.de>
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
  * @package    Controller
  */
 class TagListMembers extends TagList

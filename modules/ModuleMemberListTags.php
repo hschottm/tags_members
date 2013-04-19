@@ -1,17 +1,14 @@
 <?php
 
-namespace Contao;
-
 /**
- * @copyright  Helmut Schottmüller 2009
- * @author     Helmut Schottmüller <typolight@aurealis.de>
+ * @copyright  Helmut Schottmüller 2008-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
  * @package    tags_members
  * @license    LGPL 
  * @filesource
  */
 
-// deal with eventual ModuleMemberlist extensions
-eval('class ModuleMemberListTagsSuperClass extends ' . $GLOBALS['tags_members']['default_memberlist'] . ' {}');
+namespace Contao;
 
 /**
  * Class ModuleMemberListTags
@@ -20,7 +17,7 @@ eval('class ModuleMemberListTagsSuperClass extends ' . $GLOBALS['tags_members'][
  * @author     Helmut Schottmüller <typolight@aurealis.de>
  * @package    memberextensions
  */
-class ModuleMemberListTags extends ModuleMemberListTagsSuperClass
+class ModuleMemberListTags extends ModuleMemberlist
 {
 	/**
 	 * List all members
