@@ -17,9 +17,9 @@ array_insert($GLOBALS['FE_MOD']['tags'], 1, array
 	'tagcloudmembers'    => 'ModuleTagCloudMembers'
 ));
 
-$GLOBALS['FE_MOD']['user']['memberlist'] = 'ModuleMemberListTags';
 $GLOBALS['TL_FFL']['tag'] = 'TagFieldMemberFrontend';
 
-$GLOBALS['tags']['sourcetable'][] = 'tl_member';
+$GLOBALS['tags_extension']['sourcetable'][] = 'tl_member';
+$GLOBALS['TL_HOOKS']['setMemberlistOptions'][] = array('TagMemberHelper', 'setMemberlistOptions');
 
 ?>
