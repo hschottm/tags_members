@@ -1,8 +1,8 @@
-<?php if (!defined('TL_ROOT')) die('You can not access this file directly!');
+<?php
 
 /**
- * @copyright  Helmut Schottmüller 2009
- * @author     Helmut Schottmüller <typolight@aurealis.de>
+ * @copyright  Helmut Schottmüller 2009-2013
+ * @author     Helmut Schottmüller <https://github.com/hschottm/tags_members>
  * @package    Backend
  * @license    LGPL
  * @filesource

@@ -12,7 +12,7 @@ class tl_member_tags extends tl_member
 {
 	public function deleteMember($dc)
 	{
-		$this->Database->prepare("DELETE FROM tl_tag WHERE from_table = ? AND id = ?")
+		$this->Database->prepare("DELETE FROM tl_tag WHERE from_table = ? AND tid = ?")
 			->execute($dc->table, $dc->id);
 	}
 	
@@ -24,7 +24,7 @@ class tl_member_tags extends tl_member
 			{
 				foreach ($this->Session->get('tl_member_copy') as $data)
 				{
-					$this->Database->prepare("INSERT INTO tl_tag (id, tag, from_table) VALUES (?, ?, ?)")
+					$this->Database->prepare("INSERT INTO tl_tag (tid, tag, from_table) VALUES (?, ?, ?)")
 						->execute($dc->id, $data['tag'], $data['table']);
 				}
 			}
@@ -33,7 +33,7 @@ class tl_member_tags extends tl_member
 			{
 				return;
 			}
-			$objTags = $this->Database->prepare("SELECT * FROM tl_tag WHERE id = ? AND from_table = ?")
+			$objTags = $this->Database->prepare("SELECT * FROM tl_tag WHERE tid = ? AND from_table = ?")
 				->execute($this->Input->get('id'), $dc->table);
 			$tags = array();
 			while ($objTags->next())

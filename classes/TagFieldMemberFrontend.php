@@ -35,12 +35,12 @@ class TagFieldMemberFrontend extends \FormTextField
 		{
 			$this->import('FrontendUser', 'User');
 			$this->import('Database');
-			$this->Database->prepare("DELETE FROM tl_tag WHERE from_table = ? AND id = ?")
+			$this->Database->prepare("DELETE FROM tl_tag WHERE from_table = ? AND tid = ?")
 				->execute('tl_member', $this->User->id);
 			$tags = array_filter(trimsplit(",", $value), 'strlen');
 			foreach ($tags as $tag)
 			{
-				$this->Database->prepare("INSERT INTO tl_tag (id, tag, from_table) VALUES (?, ?, ?)")
+				$this->Database->prepare("INSERT INTO tl_tag (tid, tag, from_table) VALUES (?, ?, ?)")
 					->execute($this->User->id, $tag, 'tl_member');
 			}
 			return "";
@@ -56,7 +56,7 @@ class TagFieldMemberFrontend extends \FormTextField
 	{
 		$this->import('FrontendUser', 'User');
 		$this->import('Database');
-		$arrTags = $this->Database->prepare("SELECT tag FROM tl_tag WHERE id = ? AND from_table = ? ORDER BY tag ASC")
+		$arrTags = $this->Database->prepare("SELECT tag FROM tl_tag WHERE tid = ? AND from_table = ? ORDER BY tag ASC")
 			->execute($this->User->id, 'tl_member')
 			->fetchEach('tag');
 		return count($arrTags) ? implode(",", $arrTags) : '';
