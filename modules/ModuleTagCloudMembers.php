@@ -41,6 +41,7 @@ class ModuleTagCloudMembers extends \ModuleTagCloud
 		if (strlen($this->tag_buckets) && $this->tag_buckets > 0) $taglist->buckets = $this->tag_buckets;
 		if (strlen($this->tag_membergroups)) $taglist->membergroups = deserialize($this->tag_membergroups, TRUE);
 		$this->arrTags = $taglist->getTagList();
+		if (strlen($this->tag_topten_number) && $this->tag_topten_number > 0) $taglist->topnumber = $this->tag_topten_number;
 		if ($this->tag_topten) $this->arrTopTenTags = $taglist->getTopTenTagList();
 		if (strlen($this->Input->get('tag')) && $this->tag_related)
 		{
