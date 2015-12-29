@@ -147,12 +147,15 @@ class TagFieldMemberFrontend extends \FormTextField
 		}
 		$list .= '</ul></div>';
 		$value = (!$this->blnSubmitInput) ? $this->readTags() : $this->varValue;
-		return sprintf($list.'<input type="text" name="%s" id="ctrl_%s" class="text%s" value="%s"%s />',
+		return sprintf($list.'<input type="%s" name="%s" id="ctrl_%s" class="text%s%s" value="%s"%s%s',
+						$this->type,
 						$this->strName,
 						$this->strId,
-						(strlen($this->strClass) ? ' ' . $this->strClass : ''),
-						specialchars($value),
-						$this->getAttributes());
+						($this->hideInput ? ' password' : ''),
+						(($this->strClass != '') ? ' ' . $this->strClass : ''),
+						specialchars($this->value),
+						$this->getAttributes(),
+						$this->strTagEnding) . $this->addSubmit();
 	}
 
 	/**
